@@ -15,4 +15,8 @@ class SiteController extends Controller
     public function courses(){
         return view ('frontend.course.index');
     }
+
+    public function contact(){
+        return view ('frontend.contact');
+    }
 }

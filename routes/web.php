@@ -9,3 +9,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/',[SiteController::class,'index'])->name('index');
 Route::get('/courses',[SiteController::class,'courses'])->name('courses');
+Route::get('/contact',[SiteController::class,'contact'])->name('contact');
