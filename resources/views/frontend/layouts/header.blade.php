@@ -7,9 +7,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="{{ route('index') }}" class="nav-item nav-link active">Home</a>
+            <a href="{{ route('index') }}" class="nav-item nav-link {{ Route::currentRouteName() == 'index' ? 'active':''}}">Home</a>
             <a href="about.html" class="nav-item nav-link">About</a>
-            <a href="{{ route('courses') }}" class="nav-item nav-link">Courses</a>
+            <a href="{{ route('courses') }}" class="nav-item nav-link {{ Route::currentRouteName() == 'courses' ? 'active':''}}">Courses</a>
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                 <div class="dropdown-menu bg-light m-0">
