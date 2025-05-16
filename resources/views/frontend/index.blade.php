@@ -333,22 +333,24 @@
                 <h1 class="display-6 mb-4">We Have Great Experience Of Driving</h1>
             </div>
             <div class="row g-0 team-items">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item position-relative">
-                        <div class="position-relative">
-                            <img class="img-fluid" src="{{ asset('assets/frontend') }}/img/team-1.jpg" alt="">
-                            <div class="team-social text-center">
-                                <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-instagram"></i></a>
+                @foreach($users as $user)
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="{{ ++$loop->index * 0.3 - 0.1 }}s">
+                        <div class="team-item position-relative">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="{{ asset('uploads/users') }}/{{ $user->photo }}" alt="">
+                                <div class="team-social text-center">
+                                    <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light text-center p-4">
+                                <h5 class="mt-2">{{ $user->name }}</h5>
+                                <span>Trainer</span>
                             </div>
                         </div>
-                        <div class="bg-light text-center p-4">
-                            <h5 class="mt-2">Full Name</h5>
-                            <span>Trainer</span>
-                        </div>
                     </div>
-                </div>
+                @endforeach
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item position-relative">
                         <div class="position-relative">
