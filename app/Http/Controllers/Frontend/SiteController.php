@@ -10,7 +10,7 @@ class SiteController extends Controller
 {
     //
     public function index(){
-        $users = User::inRandomOrder()->take(4)->get();
+        $users = User::inRandomOrder()->take(8)->get();
         return view ('frontend.index',compact('users'));
     }
 

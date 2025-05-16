@@ -334,7 +334,7 @@
             </div>
             <div class="row g-0 team-items">
                 @foreach($users as $user)
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="{{ ++$loop->index * 0.3 - 0.1 }}s">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="{{ ++$loop->index * 0.2 - 0.1 }}s">
                         <div class="team-item position-relative">
                             <div class="position-relative">
                                 <img class="img-fluid" src="{{ asset('uploads/users') }}/{{ $user->photo }}" alt="">
@@ -351,6 +351,7 @@
                         </div>
                     </div>
                 @endforeach
+                {{--
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item position-relative">
                         <div class="position-relative">
@@ -398,7 +399,7 @@
                             <span>Trainer</span>
                         </div>
                     </div>
-                </div>
+                </div>--}}
             </div>
         </div>
     </div>
