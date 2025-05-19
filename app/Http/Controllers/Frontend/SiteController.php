@@ -7,9 +7,23 @@ use Illuminate\Http\Request;
 
 class SiteController extends Controller
 {
-    //
     Public function index()
     {
         return view('frontend.index');
+    }
+
+    public function blogs()
+    {
+        return view('frontend.blog.index');
+    }
+
+    public function courses()
+    {
+        return view('frontend.course.index');
+    }
+
+    public function contact()
+    {
+        return view('frontend.contact');
     }
 }
