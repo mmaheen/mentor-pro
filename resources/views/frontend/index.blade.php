@@ -423,7 +423,7 @@
                                 <img src="{{ asset('uploads/blogs/'.$blog->image) }}" class="card-img-top" alt="blog">
                                 <div class="card-body">
                                     <a href="#" class="btn_4">{{ $blog->category->name }}</a>
-                                    <a href="blog.html">
+                                    <a href="{{ route('blog.details', $blog->slug) }}">
                                         <h5 class="card-title">
                                             {{ substr($blog->title, 0,20) }}
                                             {{ strlen($blog->title) > 20 ? '...' : '' }}    
