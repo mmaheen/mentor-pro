@@ -10,13 +10,14 @@ class SiteController extends Controller
 {
     Public function index()
     {
-        $blogs = Blog::select ('image','title','description','slug','category_id')->with('category')->paginate(5);
+        $blogs = Blog::select ('image','title','description','slug','category_id')->with('category')->paginate(6); //Students Blogs
         return view('frontend.index', compact('blogs'));
     }
 
     public function blogs()
     {
-        return view('frontend.blog.index');
+        $blogs = Blog::select ('image','title','description','slug','category_id','created_at')->with('category')->paginate(5); //Students Blogs
+        return view('frontend.blog.index', compact('blogs'));
     }
 
     public function courses()
