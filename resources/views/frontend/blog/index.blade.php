@@ -38,7 +38,7 @@
                                 </div>
 
                                 <div class="blog_details">
-                                    <a class="d-inline-block" href="single-blog.html">
+                                    <a class="d-inline-block" href="{{ route('blog.details', $blog->slug) }}">
                                         <h2>
                                             {{ Str::limit($blog->title, 50) }}
                                         </h2>

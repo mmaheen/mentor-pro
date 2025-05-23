@@ -24,7 +24,7 @@
                                     <a class="nav-link" href="{{ route('courses') }}">Courses</a>
                                 </li>
                                 <li class="nav-item {{ Route::currentRouteName() == 'blogs' ? 'active' : '' }}">
-                                    <a class="nav-link" href="{{ route('blogs') }}">Blog</a>
+                                    <a class="nav-link" href="{{ route('blogs') }}">Blogs</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
