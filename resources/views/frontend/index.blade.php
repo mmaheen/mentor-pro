@@ -416,24 +416,33 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6 col-lg-4 col-xl-4">
-                    <div class="single-home-blog">
-                        <div class="card">
-                            <img src="{{ asset('assets/frontend') }}/img/blog/blog_1.png" class="card-img-top" alt="blog">
-                            <div class="card-body">
-                                <a href="#" class="btn_4">Design</a>
-                                <a href="blog.html">
-                                    <h5 class="card-title">Dry beginning sea over tree</h5>
-                                </a>
-                                <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
-                                <ul>
-                                    <li> <span class="ti-comments"></span>2 Comments</li>
-                                    <li> <span class="ti-heart"></span>2k Like</li>
-                                </ul>
+                @foreach ($blogs as $blog)
+                    <div class="col-sm-6 col-lg-4 col-xl-4">
+                        <div class="single-home-blog">
+                            <div class="card">
+                                <img src="{{ asset('uploads/blogs/'.$blog->image) }}" class="card-img-top" alt="blog">
+                                <div class="card-body">
+                                    <a href="#" class="btn_4">{{ $blog->category->name }}</a>
+                                    <a href="blog.html">
+                                        <h5 class="card-title">
+                                            {{ substr($blog->title, 0,20) }}
+                                            {{ strlen($blog->title) > 20 ? '...' : '' }}    
+                                        </h5>
+                                    </a>
+                                    <p>
+                                        {{ substr($blog->description, 0, 70) }}
+                                        {{ strlen($blog->description) > 68 ? '...' : '' }}
+                                    </p>
+                                    <ul>
+                                        <li> <span class="ti-comments"></span>2 Comments</li>
+                                        <li> <span class="ti-heart"></span>2k Like</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
+                
                 <div class="col-sm-6 col-lg-4 col-xl-4">
                     <div class="single-home-blog">
                         <div class="card">

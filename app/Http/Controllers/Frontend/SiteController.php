@@ -10,7 +10,7 @@ class SiteController extends Controller
 {
     Public function index()
     {
-        $blogs = Blog::with('category','user')->latest()->paginate(5);
+        $blogs = Blog::with('category','user')->paginate(5);
         return view('frontend.index', compact('blogs'));
     }
 
