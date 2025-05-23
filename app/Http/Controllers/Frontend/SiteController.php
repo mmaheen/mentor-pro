@@ -6,6 +6,7 @@ use App\Models\Blog;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Course;
 
 class SiteController extends Controller
 {
@@ -32,7 +33,8 @@ class SiteController extends Controller
 
     public function courses()
     {
-        return view('frontend.course.index');
+        $courses = Course::select ('image','name','description','slug','category_id','price','user_id')->with('category','user')->paginate(6); //Main Courses
+        return view('frontend.course.index', compact('courses'));
     }
 
     public function contact()

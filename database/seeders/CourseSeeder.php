@@ -37,6 +37,7 @@ class CourseSeeder extends Seeder
                 'slug' => \Illuminate\Support\Str::slug($course),
                 'description' => $faker->paragraph(3),
                 'category_id' => \App\Models\Category::inRandomOrder()->first()->id,
+                'user_id' => \App\Models\User::inRandomOrder()->first()->id,
                 'price' => $faker->numberBetween(1000, 50000),
                 'image' => $new_file_name
             ]);
