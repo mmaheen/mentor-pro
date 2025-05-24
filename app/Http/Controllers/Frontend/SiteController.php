@@ -12,8 +12,9 @@ class SiteController extends Controller
 {
     Public function index()
     {
+        $courses = Course::select ('image','name','description','slug','category_id','price','user_id')->with('category','user')->take(6)->get(); //Main Courses
         $blogs = Blog::select ('image','title','description','slug','category_id')->with('category')->paginate(6); //Students Blogs
-        return view('frontend.index', compact('blogs'));
+        return view('frontend.index', compact('blogs', 'courses'));
     }
 
     public function blogs()

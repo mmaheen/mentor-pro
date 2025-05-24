@@ -46,7 +46,7 @@
                                 <div class="author_info">
                                     <div class="author_img">
                                         @if ($course->user->image == null)
-                                            <img src="{{ asset('assets/frontend/img/default.jpg') }}" alt="" height="50px" width="50px" class="rounded-circle">
+                                            <img src="{{ asset('assets/frontend/img/default_user.jpg') }}" alt="" height="50px" width="50px" class="rounded-circle">
                                         @else
                                             <img src="{{ asset('uploads/users/'. $course->user->image) }}" alt="" height="50px" width="50px" class="rounded-circle">                            
                                         @endif
